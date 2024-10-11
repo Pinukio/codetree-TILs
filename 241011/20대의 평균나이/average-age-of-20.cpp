@@ -5,9 +5,9 @@ int main() {
     int sum = 0;
     int input;
     int cnt = 0;
-    while(cnt < 100) {
+    while(1) {
         cin >> input;
-        if(input >= 30)
+        if(input >= 30 || input < 20)
             break;
         sum += input;
         cnt++;
