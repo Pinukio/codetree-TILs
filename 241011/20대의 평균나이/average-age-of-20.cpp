@@ -5,7 +5,7 @@ int main() {
     int sum = 0;
     int input;
     int cnt = 0;
-    while(1) {
+    while(cnt < 100) {
         cin >> input;
         if(input >= 30)
             break;
