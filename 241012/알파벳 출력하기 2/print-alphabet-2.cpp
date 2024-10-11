@@ -10,6 +10,8 @@ int main() {
             cout << "  ";
         }
         for(int k = 0; k < n-i; k++) {
+            if(c > 'Z')
+                c = 'A';
             cout << c++ << " ";
         }
         cout << endl;
