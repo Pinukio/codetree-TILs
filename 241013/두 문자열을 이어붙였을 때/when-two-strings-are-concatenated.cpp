@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-    int A, B;
+    string A, B;
     cin >> A >> B;
     if(A+B == B+A)
         cout << "true";
