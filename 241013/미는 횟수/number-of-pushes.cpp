@@ -12,5 +12,6 @@ int main() {
         }
         input = input.substr(input.length()-1) + input.substr(0, input.length()-1);
     }
+    cout << -1;
     return 0;
 }
