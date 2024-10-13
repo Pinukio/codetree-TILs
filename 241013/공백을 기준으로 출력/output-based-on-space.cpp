@@ -2,16 +2,16 @@
 using namespace std;
 
 int main() {
-    string result, input;
-    int cnt = 0;
-    while(cin.peek() != string::npos) {
-        if(cin.peek() == '\n')
-            cnt++;
-        if(cnt == 2)
-            break;
-        cin >> input;
-        result += input;
+    string line1, line2;
+    getline(cin, line1);
+    getline(cin, line2);
+    for(int i = 0; i < line1.length(); i++) {
+        if(line1[i] != ' ')
+            cout << line1[i];
     }
-    cout << result;
+    for(int i = 0; i < line2.length(); i++) {
+        if(line2[i] != ' ')
+            cout << line2[i];
+    }
     return 0;
 }
