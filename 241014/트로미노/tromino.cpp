@@ -57,9 +57,10 @@ int main() {
                     max = sum+grid[i][j-1];
             }
 
-            if(j < m-2) {
+            if(j < m-3) {
                 // xx x
-                if(sum+grid[i][j+1] > max)
+                // j+2 < m-1
+                if(sum+grid[i][j+2] > max)
                     max = sum+grid[i][j+1];
             }
 
