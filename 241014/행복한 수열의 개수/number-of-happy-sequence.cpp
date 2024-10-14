@@ -11,24 +11,27 @@ int main() {
     }
 
     for(int i = 0; i < n; i++) {
-        cntRow = cntCol = 0;
-        maxRow = maxCol = 0;
+        cntRow = cntCol = 1;
+        maxRow = maxCol = 1;
         for(int j = 0; j < n-1; j++) {
             // row
             if (grid[i][j] == grid[i][j+1]) {
                 if(++cntRow > maxRow)
                     maxRow = cntRow;
             }
-            else 
-                cntRow = 0;
+                
+            else {
+                cntRow = 1;
+            }
 
-            if(grid[j][i] == grid[j+1][i])
+            if(grid[j][i] == grid[j+1][i]) {
                 if(++cntCol > maxCol)
                     maxCol = cntCol;
+            }
             else 
-                cntCol = 0;
+                cntCol = 1;
         }
-        result += (maxRow >= m-1) + (maxCol >= m-1);
+        result += (maxRow >= m) + (maxCol >= m);
     }
 
     cout << result;
