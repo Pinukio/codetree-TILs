@@ -39,7 +39,7 @@ int main() {
             for(int j = 0; j < n; j++) {
                 gold = howManyGold(j, i, n, k);
                 efficiency = gold*m - cost;
-                if(efficiency > 0) {
+                if(efficiency >= 0 && gold > maxGold) {
                     maxGold = gold;
                 }
             }
