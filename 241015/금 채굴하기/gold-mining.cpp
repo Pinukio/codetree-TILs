@@ -33,7 +33,7 @@ int main() {
         }
     }
 
-    for(int k = 0; k < n; k++) {
+    for(int k = 0; k <= n; k++) {
         cost = k*k + (k+1)*(k+1);
         for(int i = 0; i < n; i++) {
             for(int j = 0; j < n; j++) {
