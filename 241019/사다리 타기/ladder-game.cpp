@@ -14,7 +14,7 @@ vector<int> simulate(pair<int, int> testEdges[15], int size) {
     vector<int> resultVector;
     for(int i = 1; i <= n; i++) {
         int player_x = i;
-        int player_y = m;
+        int player_y = 15;
 
         while(player_y > 0) {
             for(int j = 0; j < size; j++) {
