@@ -6,11 +6,11 @@ int main() {
     int cpy[400];
     int n, t;
     cin >> n >> t;
+    t %= (n*2);
     int pivot = n*2-t;
     for(int i = 0; i < n*2; i++) {
         cin >> arr[i];
     }
-    t %= (n*2);
     for(int i = 0; i < t; i++) {
         cpy[i] = arr[pivot+i];
     }
