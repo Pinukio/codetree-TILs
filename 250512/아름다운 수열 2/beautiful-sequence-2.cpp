@@ -1,9 +1,26 @@
 #include <iostream>
-
+#include <algorithm>
 using namespace std;
 
 int N, M;
 int A[100], B[100];
+
+bool isBeautiful(int startIdx) {
+    int* arr = new int[M];
+    //A의 연속 부분집합 <-> B
+    for(int i = 0; i < M; i++) {
+        arr[i] = A[startIdx+i];
+    }
+    sort(arr, arr+M);
+
+    for(int i = 0; i < M; i++) {
+        if(arr[i] != B[i]) {
+            return false;
+        }
+    }
+    delete[] arr;
+    return true;
+}
 
 int main() {
     cin >> N >> M;
@@ -14,25 +31,11 @@ int main() {
 
     // Please write your code here.
     int count = 0;
-    bool isBeautiful = true;
-    bool isThere = false;
+
+    sort(B, B+M);
 
     for(int i = 0; i <= N-M; i++) {
-        isBeautiful = true;
-        for(int j = 0; j < M; j++) {
-            isThere = false;
-            for(int k = 0; k < M; k++) {
-                if(A[i+j] == B[k]) {
-                    isThere = true;
-                    break;
-                }
-            }
-            if(!isThere) {
-                isBeautiful = false;
-                break;
-            }
-        }
-        if(isBeautiful) count++;
+        if(isBeautiful(i)) count++;
     }
 
     cout << count;
